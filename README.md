@@ -1,0 +1,5 @@
+# IPCPipesCoreObjectExchangeService
+WIP
+
+# Usage
+WIP
