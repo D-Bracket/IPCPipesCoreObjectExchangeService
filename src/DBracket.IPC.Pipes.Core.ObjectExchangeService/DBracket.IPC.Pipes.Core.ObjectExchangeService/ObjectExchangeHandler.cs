@@ -6,7 +6,7 @@ using System.Reflection;
 using System.Text;
 using System.Threading;
 
-namespace DBracket.IPC.Pipes.Core.PairedObjectExchange
+namespace DBracket.IPC.Pipes.Core.ObjectExchangeService
 {
     /// <summary>
     /// Exchanges objects with an ObjectExchangeHandler in another program via pipes. The ExchangeHandlers need to have the same pipename.
@@ -224,7 +224,7 @@ namespace DBracket.IPC.Pipes.Core.PairedObjectExchange
         /// <summary>
         /// Is called when the object was changed from this point. Sends the object to the other point
         /// </summary>
-        private void Update(string objectName)
+        private void Update()
         {
             var responseJson = JsonConvert.SerializeObject(_objectToExchange);
             byte[] responseBytes = Encoding.ASCII.GetBytes(responseJson);
@@ -294,14 +294,14 @@ namespace DBracket.IPC.Pipes.Core.PairedObjectExchange
         #endregion
         #endregion
     }
-}
 
-/// <summary>
-/// ICP Points to connect to
-/// </summary>
-public enum Points
-{
-    NotSet = 0,
-    PointA = 1,
-    PointB = 2
+    /// <summary>
+    /// ICP Points to connect to
+    /// </summary>
+    public enum Points
+    {
+        NotSet = 0,
+        PointA = 1,
+        PointB = 2
+    }
 }

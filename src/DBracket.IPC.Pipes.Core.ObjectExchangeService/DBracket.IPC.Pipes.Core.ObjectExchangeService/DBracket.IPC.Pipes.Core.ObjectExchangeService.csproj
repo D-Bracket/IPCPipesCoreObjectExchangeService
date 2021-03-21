@@ -2,6 +2,17 @@
 
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
+    <Version>1.0.2</Version>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <Authors>D-Bracket</Authors>
+    <Product>ObjectExchangeService</Product>
+    <Description>Library for object exchange between two apps via pipes.</Description>
+    <Copyright>https://github.com/D-Bracket/IPCPipesCoreObjectExchangeService</Copyright>
+    <PackageProjectUrl>https://github.com/D-Bracket/IPCPipesCoreObjectExchangeService</PackageProjectUrl>
+    <RepositoryType></RepositoryType>
+    <PackageTags>IPC, Pipes, DataExchange, Data, Transfer, ObjectExchange</PackageTags>
+    <RepositoryUrl>https://github.com/D-Bracket/IPCPipesCoreObjectExchangeService</RepositoryUrl>
+    <NeutralLanguage>English</NeutralLanguage>
   </PropertyGroup>
 
   <ItemGroup>

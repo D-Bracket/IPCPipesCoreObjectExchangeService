@@ -1,5 +1,4 @@
-﻿using DBracket.IPC.Pipes.Core.PairedObjectExchange;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -44,21 +43,25 @@ namespace DBracket.IPC.Pipes.Core.ObjectExchangeService.Example
         private void btnCntMaster_Click(object sender, RoutedEventArgs e)
         {
             _exchangeHandler.Start("Channel", Points.PointA);
+            btnCntSlave.IsEnabled = false;
+            txtTestDataSlave.IsEnabled = false;
         }
 
         private void btnDisCntMaster_Click(object sender, RoutedEventArgs e)
         {
-
+            _exchangeHandler.Stop();
         }
 
         private void btnCntSlave_Click(object sender, RoutedEventArgs e)
         {
             _exchangeHandler.Start("Channel", Points.PointB);
+            btnCntMaster.IsEnabled = false;
+            txtTestDataMaster.IsEnabled = false;
         }
 
         private void btnDisCntSlave_Click(object sender, RoutedEventArgs e)
         {
-
+            _exchangeHandler.Stop();
         }
 
         private void txtTestDataMaster_KeyDown(object sender, KeyEventArgs e)

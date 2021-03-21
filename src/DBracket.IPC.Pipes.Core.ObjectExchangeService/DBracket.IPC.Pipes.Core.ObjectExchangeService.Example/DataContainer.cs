@@ -1,5 +1,4 @@
-﻿using DBracket.IPC.Pipes.Core.PairedObjectExchange;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,7 +10,6 @@ namespace DBracket.IPC.Pipes.Core.ObjectExchangeService.Example
     {
         public DataContainer()
         {
-            objectName = "object1";
         }
 
         /// <summary>
@@ -26,7 +24,7 @@ namespace DBracket.IPC.Pipes.Core.ObjectExchangeService.Example
             set
             {
                 _TestDataString = value;
-                ObjectChanged?.Invoke(objectName);
+                ObjectChanged?.Invoke();
             }
         }
         private string _TestDataString;
@@ -43,15 +41,10 @@ namespace DBracket.IPC.Pipes.Core.ObjectExchangeService.Example
             set
             {
                 _TestDataInt = value;
-                ObjectChanged?.Invoke(objectName);
+                ObjectChanged?.Invoke();
             }
         }
         private int _TestDataInt;
-
-        /// <summary>
-        /// Name of the object. Used to identify, when multiple objects are added to the Exchangehandler
-        /// </summary>
-        public string objectName { get; set; }
 
         /// <summary>
         /// Raise to send object data to the other application

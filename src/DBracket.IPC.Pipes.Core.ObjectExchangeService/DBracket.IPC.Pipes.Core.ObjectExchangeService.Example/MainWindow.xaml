@@ -23,6 +23,7 @@
                 <TextBox x:Name="txtTestDataMaster" KeyDown="txtTestDataMaster_KeyDown"/>
 
                 <Button x:Name="btnDisCntMaster"
+                        Margin="0,20,0,0"
                         Click="btnDisCntMaster_Click"
                         Content="Verbindung schließen">
                 </Button>
@@ -49,6 +50,7 @@
                 <TextBox x:Name="txtTestDataSlave" KeyDown="txtTestDataSlave_KeyDown"/>
 
                 <Button x:Name="btnDisCntSlave"
+                        Margin="0,20,0,0"
                         Click="btnDisCntSlave_Click"
                         Content="Verbindung schließen">
                 </Button>
